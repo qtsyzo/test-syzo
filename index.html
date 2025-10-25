@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Syzo's Modded Stuff</title>
+
+  <!-- ✅ Social Embed -->
+  <meta property="og:title" content="Syzo's Modded Stuff" />
+  <meta property="og:description" content="Modded VR Games by Syzo — All in one clean website." />
+  <meta property="og:url" content="https://qtsyzo.github.io/syzos-mods/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/qtsyzo/syzos-mods/main/syzosserverpfp.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="200" />
+  <meta property="og:image:height" content="200" />
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Syzo's Modded Stuff" />
+  <meta name="twitter:description" content="Modded VR Games by Syzo — All in one clean website." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/qtsyzo/syzos-mods/main/syzosserverpfp.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+      margin: 0;
+    }
+
+    .discord-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #5865F2;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #5865F2aa;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .discord-btn:hover {
+      background-color: #4752C4;
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px #5865F2;
+    }
+
+    nav {
+      text-align: center;
+      margin: 25px 0 35px;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      background: rgba(255,255,255,0.1);
+      padding: 10px 18px;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #82ff9e;
+      color: #111;
+      box-shadow: 0 0 15px #82ff9e;
+    }
+
+    #searchBar {
+      margin: 0 auto 35px;
+      padding: 14px 18px;
+      width: 320px;
+      max-width: 90%;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      background-color: #2a2a3a;
+      color: #ddd;
+      display: block;
+      box-shadow: inset 0 0 8px #0008;
+      transition: background-color 0.3s ease;
+    }
+
+    #searchBar:focus {
+      background-color: #393951;
+      box-shadow: 0 0 12px #82ff9e;
+      color: #fff;
+    }
+
+    section {
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      margin-bottom: 30px;
+    }
+
+    .game-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      padding: 0 40px 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .platform {
+      background: linear-gradient(145deg, #2a2a3a, #1c1c29);
+      border-radius: 15px;
+      padding: 10px;
+      box-shadow: 5px 5px 15px #161621, -5px -5px 15px #393951;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .platform:hover {
+      box-shadow: 5px 5px 25px #505070, -5px -5px 25px #7a7ab0;
+    }
+
+    .game-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .game-card {
+      background: #1c1c29;
+      padding: 22px 24px;
+      border-radius: 12px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: inset 0 0 5px #0008;
+      min-height: 130px;
+    }
+
+    .game-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 25px #82ff9e;
+    }
+
+    .game-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #dfffe0;
+      user-select: none;
+    }
+
+    .game-status {
+      font-size: 1rem;
+      color: #b7d8c8;
+      user-select: none;
+      display: inline-block;
+      margin-left: 12px;
+      vertical-align: middle;
+    }
+
+    .game-status a {
+      color: #82ff9e;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 4px;
+    }
+
+    .status-circle {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      user-select: none;
+    }
+
+    .status-circle.green { background-color: #2ecc71; box-shadow: 0 0 10px #2ecc71aa; }
+    .status-circle.red { background-color: #e74c3c; box-shadow: 0 0 10px #e74c3caa; }
+
+    footer {
+      background-color: rgba(0,0,0,0.5);
+      color: #bbb;
+      padding: 18px 20px;
+      text-align: center;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      user-select: none;
+      box-shadow: inset 0 1px 3px #0008;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      #searchBar { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Syzo's Modded Stuff</h1>
+    <a href="https://discord.gg/xY729SP4gA" target="_blank" rel="noopener noreferrer" class="discord-btn">
+      💬 Join our Discord
+    </a>
+  </header>
+
+  <nav>
+    <a href="#apks">APKs</a>
+    <a href="#obbs">OBBs</a>
+    <a href="#metadatas">Metadatas</a>
+  </nav>
+
+  <input type="text" id="searchBar" placeholder="Search for a game..." onkeyup="searchGames()" />
+
+  <!-- ✅ APK SECTION -->
+  <section id="apks">
+    <h2>📦 APKs</h2>
+    <div class="game-container">
+      <div class="platform">
+        <a href="https://gofile.io/d/4oYPG8" target="_blank" class="game-link">
+          <div class="game-card"><div class="status-circle green"></div><div class="game-title">Project Coco APK</div></div>
+        </a>
+        <span class="game-status">Normal Game:</span>
+        <a href="https://www.meta.com/en-gb/experiences/project-coco/23955007477483572/" target="_blank" class="game-status">Visit on Meta</a>
+      </div>
+
+      <div class="platform">
+        <a href="https://gofile.io/d/VIgBOl" target="_blank" class="game-link">
+          <div class="game-card"><div class="status-circle red"></div><div class="game-title">Project Magic APK</div></div>
+        </a>
+        <span class="game-status">Normal Game: Not Needed</span>
+      </div>
+
+      <div class="platform">
+        <a href="https://gofile.io/d/VRSVfv" target="_blank" class="game-link">
+          <div class="game-card"><div class="status-circle green"></div><div class="game-title">Lethal Fear APK</div></div>
+        </a>
+        <span class="game-status">Normal Game:</span>
+        <a href="https://www.meta.com/en-gb/experiences/lethal-fear/9994841147195949/" target="_blank" class="game-status">Visit on Meta</a>
+      </div>
+
+      <div class="platform">
+        <a href="https://gofile.io/d/DuLv91" target="_blank" class="game-link">
+          <div class="game-card"><div class="status-circle green"></div><div class="game-title">Lethal Ape 5 APK by SillyGoose</div></div>
+        </a>
+        <span class="game-status">Normal Game:</span>
+        <a href="https://www.meta.com/en-gb/experiences/lethal-ape-5/30011002768547707/" target="_blank" class="game-status">Visit on Meta</a>
+      </div>
+
+      <div class="platform">
+        <a href="https://gofile.io/d/GTG1EG" target="_blank" class="game-link">
+          <div class="game-card"><div class="status-circle green"></div><div class="game-title">Baldi Tag APK</div></div>
+        </a>
+        <span class="game-status">Normal Game:</span>
+        <a href="https://www.meta.com/en-gb/experiences/baldi-tag/24520374087546333/" target="_blank" class="game-status">Visit on Meta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ METADATA SECTION -->
+  <section id="metadatas">
+    <h2>🧠 Metadatas</h2>
+    <div class="game-container">
+      <div class="platform">
+        <a href="https://gofile.io/d/zJVXuy" target="_blank" class="game-link">
+          <div class="game-card"><div class="status-circle green"></div><div class="game-title">Tagging Gorillas 2 Metadata by SillyGoose</div></div>
+        </a>
+        <span class="game-status">Normal Game:</span>
+        <a href="https://www.meta.com/en-gb/experiences/tagging-gorillas-2/9615763978508086/" target="_blank" class="game-status">Visit on Meta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ EMPTY OBB SECTION -->
+  <section id="obbs">
+    <h2>📂 OBBs</h2>
+    <p style="color:#ccc;">No OBB files uploaded yet.</p>
+  </section>
+
+  <footer>
+    © 2025 Syzo | All rights reserved.
+  </footer>
+
+  <script>
+    function searchGames() {
+      const input = document.getElementById('searchBar').value.toLowerCase();
+      const platforms = document.querySelectorAll('.platform');
+      platforms.forEach(p => {
+        const title = p.querySelector('.game-title').textContent.toLowerCase();
+        p.style.display = title.includes(input) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
