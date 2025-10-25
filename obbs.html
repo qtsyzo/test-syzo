@@ -6,51 +6,39 @@
   <title>OBBs — Syzo's Hub (Halloween)</title>
   <meta name="description" content="OBB files — none uploaded yet." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Creepster&display=swap" rel="stylesheet">
-  <style>
-    :root{ --accent:#ff7a18; --bg1:#2b0736; --bg2:#46202b; --muted:#e9dff0; }
-    body{ margin:0; font-family:"Poppins",sans-serif; color:var(--muted); background: linear-gradient(135deg,var(--bg1),var(--bg2)); min-height:100vh; }
-    header{ padding:20px; text-align:center; }
-    h1{ font-family:"Creepster",sans-serif; color:var(--accent); margin:6px 0; }
-    .controls{ display:flex; gap:10px; justify-content:center; align-items:center; flex-wrap:wrap; margin-bottom:12px; }
-    .btn{ padding:8px 14px; border-radius:9px; text-decoration:none; color:var(--muted); background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.03); font-weight:600; }
-    main{ padding:30px; text-align:center; }
-    .ghost{ font-size:80px; margin-bottom:18px; display:block; filter:drop-shadow(0 8px 22px rgba(0,0,0,0.6)); }
-    footer{ text-align:center; padding:24px; color:#d8cfe0; margin-top:30px; }
-  </style>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header>
-    <h1>📦 OBBs</h1>
+  <div class="fog" aria-hidden="true"></div>
+  <div class="pumpkins" aria-hidden="true"><div class="pumpkin">🎃</div></div>
+
+  <header class="header">
+    <h1 class="brand">📦 OBBs</h1>
     <div class="controls">
       <a class="btn" href="index.html">🏠 Home</a>
       <a class="btn" href="apks.html">📱 APKs</a>
       <a class="btn" href="metadatas.html">🧠 Metadatas</a>
-      <button id="audioToggleObb" class="btn">🔈 Sound</button>
+      <button class="btn audio-toggle">🔈 Sound</button>
     </div>
   </header>
 
-  <main>
-    <div class="ghost">🎃👻</div>
+  <main class="container" style="text-align:center; padding-top:40px;">
+    <div style="font-size:80px; margin-bottom:18px; filter:drop-shadow(0 8px 22px rgba(0,0,0,0.6));">🎃👻</div>
     <h2 style="color:#ffd2a6;">No OBB files uploaded yet</h2>
-    <p style="max-width:720px; margin:12px auto; color:#e6dff4;">We will have a bunch of more OBBs coming soon. The Halloween theme appears across all pages!</p>
+    <p style="max-width:720px; margin:12px auto; color:#e6dff4;">OBBs Soon!!! The Halloween theme appears across all pages!</p>
+
+    <!-- example OBB entry (commented) 
+    <div class="platform">
+      <a class="game-link" href="https://example.com/your-obb-file.obb" target="_blank">
+        <div class="game-card"><div class="status-circle green"></div><div class="game-title">Example Game OBB</div></div>
+      </a>
+    </div>
+    -->
   </main>
 
-  <footer>🎃 © 2025 Syzo | Halloween Version | All Rights Reserved 🎃</footer>
+  <footer class="footer">© 2025 Syzo | Halloween Theme</footer>
 
-  <audio id="ambientAudioObb" loop preload="auto">
-    <source src="https://cdn.jsdelivr.net/gh/jfryman/spooky-sounds@main/ambient-spooky-short.mp3" type="audio/mpeg">
-  </audio>
-
-  <script>
-    (function(){
-      const audio = document.getElementById('ambientAudioObb');
-      const btn = document.getElementById('audioToggleObb');
-      const KEY = 'syzohalloween_sound';
-      let on = localStorage.getItem(KEY) === '1';
-      function update(){ btn.textContent = on ? '🔊 Sound: On' : '🔈 Sound: Off'; if(on){ audio.play().catch(()=>{});} else{ audio.pause(); audio.currentTime=0;} }
-      btn.addEventListener('click', ()=>{ on=!on; localStorage.setItem(KEY, on?'1':'0'); update(); });
-      update();
-    })();
-  </script>
+  <script src="assets/scripts.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', ()=> window.SyzoHalloween && window.SyzoHalloween.attachGameLinkInterceptors());</script>
 </body>
 </html>
