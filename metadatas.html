@@ -6,60 +6,40 @@
   <title>Metadatas — Syzo's Hub (Halloween)</title>
   <meta name="description" content="Metadata downloads — Tagging Gorillas 2 metadata and more" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Creepster&display=swap" rel="stylesheet">
-  <style>
-    :root{ --accent:#ff7a18; --bg1:#2b0736; --bg2:#46202b; --muted:#e9dff0; }
-    body{ margin:0; font-family:"Poppins",sans-serif; color:var(--muted); background: linear-gradient(135deg,var(--bg1),var(--bg2)); min-height:100vh; }
-    header{ padding:18px; text-align:center; }
-    h1{ font-family:"Creepster",sans-serif; color:var(--accent); margin:4px 0; }
-    .controls{ display:flex; gap:10px; justify-content:center; align-items:center; flex-wrap:wrap; margin-bottom:12px; }
-    .btn{ padding:8px 14px; border-radius:9px; text-decoration:none; color:var(--muted); background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.03); font-weight:600; }
-    main{ max-width:900px; margin:0 auto; padding:18px; }
-    .platform{ background:linear-gradient(145deg,#231c24,#161018); padding:16px; border-radius:12px; box-shadow: 0 8px 22px rgba(0,0,0,0.55); margin:14px 0; display:flex; align-items:center; gap:14px; }
-    .status{ width:14px;height:14px;border-radius:50%; }
-    .green{ background:#2ecc71;}
-    .link{ color:var(--accent); font-weight:700; text-decoration:none; }
-    footer{ text-align:center; padding:26px; color:#d8cfe0; }
-  </style>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header>
-    <h1>🧠 Metadatas</h1>
+  <div class="fog" aria-hidden="true"></div>
+  <div class="pumpkins" aria-hidden="true"><div class="pumpkin">🎃</div><div class="pumpkin">🎃</div></div>
+
+  <header class="header">
+    <h1 class="brand">🧠 Metadatas</h1>
     <div class="controls">
       <a class="btn" href="index.html">🏠 Home</a>
       <a class="btn" href="apks.html">📱 APKs</a>
       <a class="btn" href="obbs.html">📦 OBBs</a>
-      <button id="audioToggleMeta" class="btn">🔈 Sound</button>
+      <button class="btn audio-toggle">🔈 Sound</button>
     </div>
   </header>
 
-  <main>
+  <main class="container">
     <div class="platform">
-      <div class="status green" aria-hidden="true"></div>
-      <div>
-        <a class="link" href="https://gofile.io/d/zJVXuy" target="_blank" rel="noopener noreferrer">Tagging Gorillas 2 Metadata by SillyGoose</a>
-        <div style="color:#d6cbe3; font-size:.95rem; margin-top:6px;">Normal Game: <a href="https://www.meta.com/en-gb/experiences/tagging-gorillas-2/9615763978508086/" target="_blank" rel="noopener noreferrer">Visit on Meta</a></div>
-      </div>
+      <a class="game-link" href="https://gofile.io/d/zJVXuy" target="_blank" rel="noopener noreferrer">
+        <div class="game-card">
+          <div class="status-circle green" aria-hidden="true"></div>
+          <div class="game-title">Tagging Gorillas 2 Metadata by SillyGoose</div>
+          <div style="color:#d6cbe3; font-size:.95rem; margin-top:6px;">Click to download</div>
+        </div>
+      </a>
+      <div style="color:#d6cbe3; font-size:.95rem; margin-top:8px;">Normal Game: <a href="https://www.meta.com/en-gb/experiences/tagging-gorillas-2/9615763978508086/" target="_blank" rel="noopener noreferrer">Visit on Meta</a></div>
     </div>
 
     <!-- add more metadata entries in same format -->
   </main>
 
-  <footer>© 2025 Syzo | Halloween Theme</footer>
+  <footer class="footer">© 2025 Syzo | Halloween Theme</footer>
 
-  <audio id="ambientAudioMeta" loop preload="auto">
-    <source src="https://cdn.jsdelivr.net/gh/jfryman/spooky-sounds@main/ambient-spooky-short.mp3" type="audio/mpeg">
-  </audio>
-
-  <script>
-    (function(){
-      const audio = document.getElementById('ambientAudioMeta');
-      const btn = document.getElementById('audioToggleMeta');
-      const KEY = 'syzohalloween_sound';
-      let on = localStorage.getItem(KEY) === '1';
-      function update(){ btn.textContent = on ? '🔊 Sound: On' : '🔈 Sound: Off'; if(on){ audio.play().catch(()=>{});} else{ audio.pause(); audio.currentTime=0;} }
-      btn.addEventListener('click', ()=>{ on=!on; localStorage.setItem(KEY, on?'1':'0'); update(); });
-      update();
-    })();
-  </script>
+  <script src="assets/scripts.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', ()=> window.SyzoHalloween && window.SyzoHalloween.attachGameLinkInterceptors());</script>
 </body>
 </html>
