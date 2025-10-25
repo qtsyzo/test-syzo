@@ -4,25 +4,41 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>APKs — Syzo's Hub (Halloween)</title>
-  <meta name="description" content="APKs — Syzo's Modded Stuff — Halloween theme" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Creepster&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <div class="fog" aria-hidden="true"></div>
-
-  <!-- bats (optional duplication for pages) -->
   <div class="bat fly1" aria-hidden="true">
-    <svg viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-      <path d="M32 6c4-5 12-6 20 0-2-1-6-2-10 0 6 1 8 6 8 10-6-3-10-2-14 2-4-4-8-5-14-2 0-4 2-9 10-10-4-2-8-1-10 0z" fill="#0f0b10"/>
-      <g class="wing"><path d="M4 18c8-6 14-4 22 0-6-2-12-1-22 0z" fill="#0f0b10"/></g>
-      <g class="wing slow" transform="translate(40,0)"><path d="M60 18c-8-6-14-4-22 0 6-2 12-1 22 0z" fill="#0f0b10"/></g>
-    </svg>
-  </div>
+  <svg viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+    <path d="M32 6c4-5 12-6 20 0-2-1-6-2-10 0 6 1 8 6 8 10-6-3-10-2-14 2-4-4-8-5-14-2 0-4 2-9 10-10-4-2-8-1-10 0z" fill="#0f0b10"/>
+    <g class="wing"><path d="M4 18c8-6 14-4 22 0-6-2-12-1-22 0z" fill="#0f0b10"/></g>
+    <g class="wing slow" transform="translate(40,0)"><path d="M60 18c-8-6-14-4-22 0 6-2 12-1 22 0z" fill="#0f0b10"/></g>
+  </svg>
+</div>
+<div class="bat fly2" aria-hidden="true">
+  <svg viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M32 6c4-5 12-6 20 0-2-1-6-2-10 0 6 1 8 6 8 10-6-3-10-2-14 2-4-4-8-5-14-2 0-4 2-9 10-10-4-2-8-1-10 0z" fill="#0f0b10"/>
+    <g class="wing"><path d="M4 18c8-6 14-4 22 0-6-2-12-1-22 0z" fill="#0f0b10"/></g>
+    <g class="wing slow" transform="translate(40,0)"><path d="M60 18c-8-6-14-4-22 0 6-2 12-1 22 0z" fill="#0f0b10"/></g>
+  </svg>
+</div>
+<div class="bat fly3" aria-hidden="true">
+  <svg viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M32 6c4-5 12-6 20 0-2-1-6-2-10 0 6 1 8 6 8 10-6-3-10-2-14 2-4-4-8-5-14-2 0-4 2-9 10-10-4-2-8-1-10 0z" fill="#0f0b10"/>
+    <g class="wing"><path d="M4 18c8-6 14-4 22 0-6-2-12-1-22 0z" fill="#0f0b10"/></g>
+    <g class="wing slow" transform="translate(40,0)"><path d="M60 18c-8-6-14-4-22 0 6-2 12-1 22 0z" fill="#0f0b10"/></g>
+  </svg>
+</div>
+<div class="bat fly4" aria-hidden="true">
+  <svg viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M32 6c4-5 12-6 20 0-2-1-6-2-10 0 6 1 8 6 8 10-6-3-10-2-14 2-4-4-8-5-14-2 0-4 2-9 10-10-4-2-8-1-10 0z" fill="#0f0b10"/>
+    <g class="wing"><path d="M4 18c8-6 14-4 22 0-6-2-12-1-22 0z" fill="#0f0b10"/></g>
+    <g class="wing slow" transform="translate(40,0)"><path d="M60 18c-8-6-14-4-22 0 6-2 12-1 22 0z" fill="#0f0b10"/></g>
+  </svg>
+</div>
 
-  <div class="pumpkins" aria-hidden="true">
-    <div class="pumpkin">🎃</div><div class="pumpkin">🎃</div><div class="pumpkin">🎃</div>
-  </div>
+  <div class="pumpkins" aria-hidden="true"><div class="pumpkin">🎃</div><div class="pumpkin">🎃</div></div>
 
   <header class="header">
     <h1 class="brand">📱 APKs — Syzo's Hub</h1>
@@ -31,14 +47,12 @@
       <a class="btn" href="metadatas.html">🧠 Metadatas</a>
       <a class="btn" href="obbs.html">📦 OBBs</a>
       <a class="btn primary" href="https://discord.gg/xY729SP4gA" target="_blank" rel="noopener noreferrer">Join Discord</a>
-      <button class="btn audio-toggle">🔈 Sound</button>
     </div>
-    <input id="searchBar" class="search" type="text" placeholder="Search for a game..." onkeyup="searchGames()" aria-label="Search games">
+    <input id="searchBar" class="search" type="text" placeholder="Search for a game..." aria-label="Search games">
   </header>
 
   <main class="container">
     <div class="game-container" id="gameContainer">
-      <!-- Project Coco APK -->
       <div class="platform">
         <a class="game-link" href="https://gofile.io/d/4oYPG8" target="_blank" rel="noopener noreferrer">
           <div class="game-card">
@@ -52,7 +66,6 @@
         </div>
       </div>
 
-      <!-- Project Magic APK -->
       <div class="platform">
         <a class="game-link" href="https://gofile.io/d/VIgBOl" target="_blank" rel="noopener noreferrer">
           <div class="game-card">
@@ -63,7 +76,6 @@
         </a>
       </div>
 
-      <!-- Lethal Fear APK -->
       <div class="platform">
         <a class="game-link" href="https://gofile.io/d/VRSVfv" target="_blank" rel="noopener noreferrer">
           <div class="game-card">
@@ -77,7 +89,6 @@
         </div>
       </div>
 
-      <!-- Lethal Ape 5 APK -->
       <div class="platform">
         <a class="game-link" href="https://gofile.io/d/DuLv91" target="_blank" rel="noopener noreferrer">
           <div class="game-card">
@@ -91,7 +102,6 @@
         </div>
       </div>
 
-      <!-- Baldi Tag APK -->
       <div class="platform">
         <a class="game-link" href="https://gofile.io/d/GTG1EG" target="_blank" rel="noopener noreferrer">
           <div class="game-card">
@@ -104,27 +114,21 @@
           <a href="https://www.meta.com/en-gb/experiences/baldi-tag/24520374087546333/" target="_blank" rel="noopener noreferrer">Visit on Meta</a>
         </div>
       </div>
-
     </div>
   </main>
 
   <footer class="footer">© 2025 Syzo | Halloween Theme</footer>
 
-  <!-- Shared scripts -->
   <script src="assets/scripts.js"></script>
-
   <script>
-    // simple search filter (same as before)
-    function searchGames(){
-      const input = document.getElementById('searchBar').value.toLowerCase();
-      const platforms = document.querySelectorAll('.platform');
-      platforms.forEach(p=>{
-        const title = (p.querySelector('.game-title') && p.querySelector('.game-title').textContent.toLowerCase()) || '';
+    document.getElementById('searchBar').addEventListener('keyup', function(){
+      const input = this.value.toLowerCase();
+      document.querySelectorAll('.platform').forEach(p=>{
+        const title = (p.querySelector('.game-title')?.textContent || '').toLowerCase();
         p.style.display = title.includes(input) ? '' : 'none';
       });
-    }
-    // ensure .game-link interceptors attach (in case DOM loaded earlier)
-    document.addEventListener('DOMContentLoaded', ()=> window.SyzoHalloween && window.SyzoHalloween.attachGameLinkInterceptors());
+    });
+    document.addEventListener('DOMContentLoaded', ()=> window.SyzoHalloween && window.SyzoHalloween.attachInterceptors());
   </script>
 </body>
 </html>
