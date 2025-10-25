@@ -4,12 +4,40 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>OBBs — Syzo's Hub (Halloween)</title>
-  <meta name="description" content="OBB files — none uploaded yet." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Creepster&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <div class="fog" aria-hidden="true"></div>
+  <div class="bat fly1" aria-hidden="true">
+  <svg viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+    <path d="M32 6c4-5 12-6 20 0-2-1-6-2-10 0 6 1 8 6 8 10-6-3-10-2-14 2-4-4-8-5-14-2 0-4 2-9 10-10-4-2-8-1-10 0z" fill="#0f0b10"/>
+    <g class="wing"><path d="M4 18c8-6 14-4 22 0-6-2-12-1-22 0z" fill="#0f0b10"/></g>
+    <g class="wing slow" transform="translate(40,0)"><path d="M60 18c-8-6-14-4-22 0 6-2 12-1 22 0z" fill="#0f0b10"/></g>
+  </svg>
+</div>
+<div class="bat fly2" aria-hidden="true">
+  <svg viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M32 6c4-5 12-6 20 0-2-1-6-2-10 0 6 1 8 6 8 10-6-3-10-2-14 2-4-4-8-5-14-2 0-4 2-9 10-10-4-2-8-1-10 0z" fill="#0f0b10"/>
+    <g class="wing"><path d="M4 18c8-6 14-4 22 0-6-2-12-1-22 0z" fill="#0f0b10"/></g>
+    <g class="wing slow" transform="translate(40,0)"><path d="M60 18c-8-6-14-4-22 0 6-2 12-1 22 0z" fill="#0f0b10"/></g>
+  </svg>
+</div>
+<div class="bat fly3" aria-hidden="true">
+  <svg viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M32 6c4-5 12-6 20 0-2-1-6-2-10 0 6 1 8 6 8 10-6-3-10-2-14 2-4-4-8-5-14-2 0-4 2-9 10-10-4-2-8-1-10 0z" fill="#0f0b10"/>
+    <g class="wing"><path d="M4 18c8-6 14-4 22 0-6-2-12-1-22 0z" fill="#0f0b10"/></g>
+    <g class="wing slow" transform="translate(40,0)"><path d="M60 18c-8-6-14-4-22 0 6-2 12-1 22 0z" fill="#0f0b10"/></g>
+  </svg>
+</div>
+<div class="bat fly4" aria-hidden="true">
+  <svg viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M32 6c4-5 12-6 20 0-2-1-6-2-10 0 6 1 8 6 8 10-6-3-10-2-14 2-4-4-8-5-14-2 0-4 2-9 10-10-4-2-8-1-10 0z" fill="#0f0b10"/>
+    <g class="wing"><path d="M4 18c8-6 14-4 22 0-6-2-12-1-22 0z" fill="#0f0b10"/></g>
+    <g class="wing slow" transform="translate(40,0)"><path d="M60 18c-8-6-14-4-22 0 6-2 12-1 22 0z" fill="#0f0b10"/></g>
+  </svg>
+</div>
+
   <div class="pumpkins" aria-hidden="true"><div class="pumpkin">🎃</div></div>
 
   <header class="header">
@@ -18,27 +46,18 @@
       <a class="btn" href="index.html">🏠 Home</a>
       <a class="btn" href="apks.html">📱 APKs</a>
       <a class="btn" href="metadatas.html">🧠 Metadatas</a>
-      <button class="btn audio-toggle">🔈 Sound</button>
     </div>
   </header>
 
   <main class="container" style="text-align:center; padding-top:40px;">
     <div style="font-size:80px; margin-bottom:18px; filter:drop-shadow(0 8px 22px rgba(0,0,0,0.6));">🎃👻</div>
     <h2 style="color:#ffd2a6;">No OBB files uploaded yet</h2>
-    <p style="max-width:720px; margin:12px auto; color:#e6dff4;">OBBs Soon!!! The Halloween theme appears across all pages!</p>
-
-    <!-- example OBB entry (commented) 
-    <div class="platform">
-      <a class="game-link" href="https://example.com/your-obb-file.obb" target="_blank">
-        <div class="game-card"><div class="status-circle green"></div><div class="game-title">Example Game OBB</div></div>
-      </a>
-    </div>
-    -->
+    <p style="max-width:720px; margin:12px auto; color:#e6dff4;">Add OBBs by copying a platform block from apks.html and placing it here. The Halloween theme appears across all pages.</p>
   </main>
 
   <footer class="footer">© 2025 Syzo | Halloween Theme</footer>
 
   <script src="assets/scripts.js"></script>
-  <script>document.addEventListener('DOMContentLoaded', ()=> window.SyzoHalloween && window.SyzoHalloween.attachGameLinkInterceptors());</script>
+  <script>document.addEventListener('DOMContentLoaded', ()=> window.SyzoHalloween && window.SyzoHalloween.attachInterceptors());</script>
 </body>
 </html>
