@@ -142,3 +142,13 @@ body{
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 16px rgba(255,122,24,0.3);
 }
+.brand .icon {
+  -webkit-text-fill-color: initial; /* keeps emoji color normal */
+  background: none;
+}
+.brand .text {
+  background: linear-gradient(90deg, #ff7a18, #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 16px rgba(255,122,24,0.3);
+}
